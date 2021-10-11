@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaft Demo</title>
+</head>
+<body>
+
+<table th:each="prod : ${list}">
+
+    <tr>
+
+        <input type="text" name="userName" value="James Carrot" th:value="${prod.studentName}" />
+
+
+        <h2 th:text="${prod.grade}"></h2>
+    <tr>
+</table>
+<tr th:each="prod : ${list}">
+    <td th:text="${prod.studentName}"></td>
+    <td th:text="${prod.grade}"></td>
+<tr>
+
+</body>
+</html>
