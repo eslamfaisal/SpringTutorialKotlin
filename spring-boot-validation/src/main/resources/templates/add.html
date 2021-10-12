@@ -8,11 +8,19 @@
 <h3>Add User</h3>
 
 <form action="addUser" method="post">
+
     Username: <input name="name" type="text"/>
     <span style="color:red" th:errors="${user.name}"></span><br/>
+
+    Email: <input name="email" type="email"/><br/>
+    <span style="color:red" th:errors="${user.email}"></span><br/>
+
     Password: <input name="password" type="password"/><br/>
-    <span style="color:red" th:errors="${user.password}"></span><br/>
-    Grade: <input name="grade" type="text"/><br/>
+    <span style="color:red" th:errors="${user.grade}"></span><br/>
+
+    Grade: <input name="grade" type="text" /><br/>
+    <span style="color:red" th:errors="${user.grade}"></span><br/>
+
     <input type="submit" value="Add">
 </form>
 </body>
