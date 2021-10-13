@@ -10,13 +10,13 @@ import org.springframework.web.servlet.ModelAndView;
 public class UserController {
 
     @RequestMapping("/add")
-    public String add(Model model) {
-        try {
-
-        } catch (Exception e) {
-            model.addAttribute("exception", e.getMessage());
-        }
-        int num = 10 / 0;
+    public String add() {
+//        try {
+//
+//        } catch (Exception e) {
+//            model.addAttribute("exception", e.getMessage());
+//        }
+//        int num = 10 / 0;
         return "add";
     }
 
@@ -26,21 +26,21 @@ public class UserController {
         String b = eslam.toLowerCase();
         return "add";
     }
-
-    @ExceptionHandler(value = {java.lang.ArithmeticException.class})
-    public ModelAndView handlerArithmeticException(Exception e) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("exception", e.toString());
-        modelAndView.setViewName("mathError");
-        return modelAndView;
-    }
-
-    @ExceptionHandler(value = {java.lang.NullPointerException.class})
-    public ModelAndView handlerNullPointerException(Exception e) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("exception", e.toString());
-        modelAndView.setViewName("nullPointerException");
-        return modelAndView;
-    }
+//
+//    @ExceptionHandler(value = {java.lang.ArithmeticException.class})
+//    public ModelAndView handlerArithmeticException(Exception e) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("exception", e.toString());
+//        modelAndView.setViewName("mathError");
+//        return modelAndView;
+//    }
+//
+//    @ExceptionHandler(value = {java.lang.NullPointerException.class})
+//    public ModelAndView handlerNullPointerException(Exception e) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("exception", e.toString());
+//        modelAndView.setViewName("nullPointerException");
+//        return modelAndView;
+//    }
 
 }
