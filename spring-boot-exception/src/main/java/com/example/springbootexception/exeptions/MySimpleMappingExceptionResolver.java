@@ -1,13 +1,12 @@
 package com.example.springbootexception.exeptions;
 
+import com.example.springbootexception.Eslam;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
-
-import java.util.Properties;
 
 @Configuration
 public class MySimpleMappingExceptionResolver {
+
 //    @Bean
 //    public SimpleMappingExceptionResolver getSimpleMappingExceptionResolver() {
 //        SimpleMappingExceptionResolver resolver = new SimpleMappingExceptionResolver();
@@ -23,4 +22,10 @@ public class MySimpleMappingExceptionResolver {
     public MyHandlerExceptionResolver getSimpleMappingExceptionResolver() {
         return new MyHandlerExceptionResolver();
     }
+
+    @Bean
+    public Eslam getEslamUser() {
+        return new Eslam();
+    }
+
 }

@@ -2,12 +2,14 @@ package com.example.springbootexception;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserController {
+
+    public UserController(Hazem user) {
+        this.user = user;
+    }
 
     @RequestMapping("/add")
     public String add() {
@@ -20,10 +22,12 @@ public class UserController {
         return "add";
     }
 
+    private final Hazem user;
+
     @RequestMapping("/nullView")
     public String nullView(Model model) {
-        String eslam = null;
-        String b = eslam.toLowerCase();
+
+        System.out.println(user.getHazem());
         return "add";
     }
 //

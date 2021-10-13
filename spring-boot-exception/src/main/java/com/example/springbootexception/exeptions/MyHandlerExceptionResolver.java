@@ -11,6 +11,8 @@ public class MyHandlerExceptionResolver implements HandlerExceptionResolver {
     @Override
     public ModelAndView resolveException(HttpServletRequest httpServletRequest,
                                          HttpServletResponse httpServletResponse, @Nullable Object o, Exception e) {
+
+        System.out.println("Hazem zoooma");
         ModelAndView mv = new ModelAndView();
         if (e instanceof ArithmeticException) {
             mv.setViewName("mathError");
