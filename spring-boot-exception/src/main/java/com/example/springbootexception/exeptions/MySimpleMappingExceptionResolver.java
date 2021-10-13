@@ -20,7 +20,7 @@ public class MySimpleMappingExceptionResolver {
 
 
     @Bean
-    public MyHandlerExceptionResolver getSimpleMappingExceptionResodlver() {
+    public MyHandlerExceptionResolver getSimpleMappingExceptionResolver() {
         return new MyHandlerExceptionResolver();
     }
 }
