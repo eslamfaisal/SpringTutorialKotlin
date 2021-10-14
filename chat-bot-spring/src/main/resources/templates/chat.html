@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Chat Room</title>
-    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <meta charset="utf-8" content="width=device-width" name="viewport">
     <link rel="stylesheet" th:href="@{/webjars/mdui/dist/css/mdui.css}">
     <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
     <script th:src="@{/webjars/mdui/dist/js/mdui.js}"></script>
@@ -73,10 +73,12 @@
      * 2、WebSocket client send message to server. example：webSocket.send();
      */
     function getWebSocket() {
+
+        var username = [[${username}]];
         /**
          * WebSocket client PS：URL shows WebSocket protocal, port number, and then end point.
          */
-        var webSocket = new WebSocket(/*[[${webSocketUrl}]]*/ 'ws://localhost:8080/chat');
+        var webSocket = new WebSocket('ws://localhost:8080/chat/' + username);
         /**
          * websocket open connection.
          */

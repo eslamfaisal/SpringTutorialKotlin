@@ -36,6 +36,7 @@ public class ChatBotSpringApplication {
     @GetMapping("/index")
     public ModelAndView index(String username, HttpServletRequest request) throws UnknownHostException {
 
+        System.out.println("username" + username);
         if (username == null || username.trim().isEmpty()) {
             return new ModelAndView("redirect:/");
         }
