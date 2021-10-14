@@ -33,6 +33,8 @@ public class WebSocketChatServer {
     @OnOpen
     public void onOpen(Session session) {
         //TODO: add on open connection.
+        System.out.println("there is a new session opened and its fucken id is = "+session.getId() );
+        onlineSessions.put(session.getId(), session);
     }
 
     /**

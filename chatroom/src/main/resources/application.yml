@@ -1,0 +1,18 @@
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates
+
+server:
+    port: 9090
+
+app:
+  base:
+      url: http://localhost:${server.port}/
+  chat:
+      url: ${app.base.url}index?username=%s
+  websocket:
+      url: ws://localhost:${server.port}/chat/
+
+selenium:
+    chromedriver: D:\Dev Tools\chromedriver_win32\chromedriver.exe
