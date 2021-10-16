@@ -15,9 +15,6 @@ import java.net.UnknownHostException;
 @RestController
 public class ChatBotSpringApplication {
 
-    @Resource
-    ServerEndpointExporter serverEndpointExporter;
-
     public static void main(String[] args) {
         SpringApplication.run(ChatBotSpringApplication.class, args);
     }
@@ -34,7 +31,7 @@ public class ChatBotSpringApplication {
      * Chatroom Page
      */
     @GetMapping("/index")
-    public ModelAndView index(String username, HttpServletRequest request) throws UnknownHostException {
+    public ModelAndView index(String username, HttpServletRequest request) {
 
         System.out.println("username" + username);
         if (username == null || username.trim().isEmpty()) {

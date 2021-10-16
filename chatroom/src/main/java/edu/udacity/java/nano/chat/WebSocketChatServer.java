@@ -30,7 +30,7 @@ public class WebSocketChatServer {
      * All chat sessions.
      * Multiple Sessions are associated with a single user to account for the case where a user logs in to a chat room on multiple tabs
      */
-    private static Map<String, Set<Session>> onlineSessions = new ConcurrentHashMap<>();
+    private static final Map<String, Set<Session>> onlineSessions = new ConcurrentHashMap<>();
 
     private static void sendMessageToAll(Message message) {
         Set<Map.Entry<String, Set<Session>>> sessionEntries = onlineSessions.entrySet();
