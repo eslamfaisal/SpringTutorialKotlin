@@ -1,0 +1,1 @@
+INSERT INTO Dog (id, name, breed) VALUE (1, 'teto', 'breed')
