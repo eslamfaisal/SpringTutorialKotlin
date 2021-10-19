@@ -9,4 +9,5 @@ import java.util.List;
 @Service
 public interface LocationService {
     List<Location> retrieveLocations();
+    Location retrieveLocationsById(Long id);
 }
