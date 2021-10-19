@@ -14,7 +14,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @ApiResponses(value = {
         @ApiResponse(code = 400, message = "This is a bad request, please follow the API documentations"),
-
 })
 public class SwaggerConfig {
     @Bean
