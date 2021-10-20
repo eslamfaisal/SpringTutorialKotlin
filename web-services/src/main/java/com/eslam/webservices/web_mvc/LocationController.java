@@ -1,4 +1,4 @@
-package com.eslam.webservices.web;
+package com.eslam.webservices.web_mvc;
 
 
 import com.eslam.webservices.entity.Location;
