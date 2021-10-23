@@ -1,4 +1,4 @@
-package com.eslam.webservices;
+package com.example.jdbc_connection;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -11,10 +11,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 @SpringBootApplication
-public class WebServicesApplication implements ApplicationRunner {
+public class JdbcConnectionApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebServicesApplication.class, args);
+        SpringApplication.run(JdbcConnectionApplication.class, args);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class WebServicesApplication implements ApplicationRunner {
             Statement stmt = con.createStatement();
 
             //A sample DDL statement execution
-            stmt.executeUpdate("CREATE TABLE EMPLOYEE (EMP_ID  NUMBER NOT NULL, EMP_NAME VARCHAR)");
+            stmt.executeUpdate("create table EMPLOYEE (EMP_ID int auto_increment, EMP_NAME varchar(50) not null, constraint EMPLOYEE_pk primary key (EMP_ID));");
 
 
         } catch (SQLException e) {

@@ -25,6 +25,10 @@ public class LocationServiceImpl implements LocationService {
     public Location retrieveLocationsById(Long id) {
 
         Optional<Location> location = locationRepository.findById(id);
+
+        Location save = locationRepository.save(location.get());
+
+
         return location.get();
     }
 }

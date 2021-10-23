@@ -10,7 +10,7 @@ public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+z
     private String name;
     private String address;
 
