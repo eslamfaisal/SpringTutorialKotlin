@@ -76,8 +76,8 @@ class CommonDataController(
     }
 
     fun getCellValueAsString(row: XSSFRow, cellNum: Int): String {
-        return if (row.getCell(cellNum).cellType == CellType.STRING) row.getCell(cellNum).stringCellValue.toString() else row.getCell(
-            cellNum
-        ).numericCellValue.toInt().toString()
+        return if (row.getCell(cellNum).cellType == CellType.STRING)
+            row.getCell(cellNum).stringCellValue.toString()
+        else row.getCell(cellNum).numericCellValue.toInt().toString()
     }
 }
