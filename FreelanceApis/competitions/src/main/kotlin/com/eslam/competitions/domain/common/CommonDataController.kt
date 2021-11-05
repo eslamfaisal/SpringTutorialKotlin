@@ -41,34 +41,10 @@ class CommonDataController(
         for (i in 1 until worksheet.physicalNumberOfRows) {
             val row = worksheet.getRow(i)
 
-            val question: Question = questionService.createQuestion(
-                Question(
-                    question = getCellValueAsString(row, 3),
-                    category = category,
-                    rightAnswer = getCellValueAsString(row, 7).toInt()
-                )
-            )
-            answerService.createAnswer(
-                Answer(
-                    answer = getCellValueAsString(row, 4),
-                    number = 1,
-                    question = question
-                )
-            )
-            answerService.createAnswer(
-                Answer(
-                    answer = getCellValueAsString(row, 5),
-                    number = 2,
-                    question = question
-                )
-            )
-            answerService.createAnswer(
-                Answer(
-                    answer = getCellValueAsString(row, 6),
-                    number = 2,
-                    question = question
-                )
-            )
+            questionService.createQuestion(Question(question = getCellValueAsString(row, 3), category = category, rightAnswer = getCellValueAsString(row, 7).toInt()))
+            answerService.createAnswer(Answer(answer = getCellValueAsString(row, 4), number = 1,))
+            answerService.createAnswer(Answer(answer = getCellValueAsString(row, 5), number = 2,))
+            answerService.createAnswer(Answer(answer = getCellValueAsString(row, 6), number = 2,))
 
         }
 

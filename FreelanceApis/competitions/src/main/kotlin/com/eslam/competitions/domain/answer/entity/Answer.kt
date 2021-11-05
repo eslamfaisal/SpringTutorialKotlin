@@ -1,6 +1,5 @@
 package com.eslam.competitions.domain.answer.entity
 
-import com.eslam.competitions.domain.question.entity.Question
 import javax.persistence.*
 
 @Entity
@@ -11,7 +10,6 @@ class Answer(
     val id: Int? = null,
     val number: Int? = null,
     val answer: String? = null,
-    @ManyToOne
-    @JoinColumn(name = "question_id", nullable = false)
-    val question: Question? = null,
+
+    val question_id: Int? = null,
 )
